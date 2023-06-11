@@ -231,6 +231,7 @@ button#deencryp:hover {
 
     margin-left: 5px;
     margin-right: 5px;
+    word-wrap: break-word;
 }
 
 #divNotfound{
