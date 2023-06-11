@@ -11,7 +11,8 @@ Programa realizado con JavaScript que realiza el encriptado de texto con las sig
     Martillo => "Mairtimesllober"
     Mairtimesllober => "Martillo"
 
-## Contactos:
+## Autor:
 
 * [Linkedin](https://www.linkedin.com/in/ariel-cabrera-9b4a461ba/)
+* [Alura](https://app.aluracursos.com/user/jonathancabrerag2012)
 * [Fiverr](https://es.fiverr.com/alucar_sv?up_rollout=true) 
