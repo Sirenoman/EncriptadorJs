@@ -1,6 +1,6 @@
  #  :page_with_curl: Encriptador de Texto con Js  :page_with_curl:
-:https://img.shields.io/badge/Version-1.0.1.1-green:
-Programa realizado con HTML CSS y JavaScript que realiza el encriptado de texto dentro de un campo y lo encripta dentro del espacio que se encuentra a la derecha de la pagina
+
+Programa realizado con ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white), ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) y ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) que realiza el encriptado de texto dentro de un campo y lo encripta dentro del espacio que se encuentra a la derecha de la pagina
 
 ## :key: Llave de encriptado :key:
 La codificacion lo realiza con las siguientes llaves de encriptado:
