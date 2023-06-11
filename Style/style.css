@@ -5,8 +5,8 @@
 
 body{
     position: relative;
-    width: 1440px;
-    height: 1024px;
+    width: 1080px;
+    height: 100%;
 
     /* Light blue/light-blue-100 */
 
@@ -18,47 +18,73 @@ body{
     height: 100%;
     display: flex;
     flex-direction: row;
-    align-items: center;
 }
 
 .InputContainer>#logo{
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    left: 40px;
-    top: 40px;
-
-    /* Auto layout */
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    width: 30px;
+    position: absolute;
+    height: 30px;
+    top: 40px;
     padding: 0px;
     gap: 40px;
+    left: 40px;
 }
 
-.InputContainer input{
-    position: absolute;
-    width: 500px;
-    height: 40px;
-    left: 40px;
-    top: 120px;
+.InputContainer textarea{
+    
+    width: 660px;
+    height: 400px;
+    resize: none;
+
     /* Rectangle */
     background: #F3F5FC;
     border-radius: 8px;
     border: none;
     outline: none;
     padding-left: 16px;
-    font-size: 20px;
+    font-size: 35px;
     font-weight: 500;
     color: #0A3871;
+
+    margin: 168px 20px 0 120px;
+}
+
+.textButton{
+    /* Frame 1 */
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+
+    width: 299px;
+    height: 18px;
+
+    margin-left: 120px;
+}
+
+.textButton p{
+    /* Texto */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 13px;
+    /* identical to box height, or 129% */
+    color: #495057;
 }
 
 .Buttons{
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    margin-top: 500px;
-    margin-left: 90px;
+    padding: 0px;
+    gap: 24px;
+
+    margin-left: 120px;
+
+    justify-content: space-between;
 }
 
 .Buttons button#encryp{
@@ -69,8 +95,6 @@ body{
 
     width: 328px;
     height: 67px;
-
-    margin-right: 40px;
 
     /* Dark blue/dark-blue-300 */
     background: #0A3871;
@@ -88,6 +112,14 @@ body{
     font-size: 18px;
     line-height: 19px;
     text-align: center;
+
+    cursor: pointer;
+    transition: .6s ease;
+
+}
+button#encryp:hover {
+    background: darken(#0A3871,7%);
+    transform: scale(1.1);
 }
 
 .Buttons button#deencryp{
@@ -122,19 +154,219 @@ body{
     font-size: 18px;
     line-height: 19px;
     text-align: center;
+
+    cursor: pointer;
+    transition: .6s ease;
+
+}
+button#deencryp:hover {
+    background: #c0d1e8;
+    transform: scale(1.1);
 }
 
 .EncriptedContainer{
     /* Rectangle */
-    position: absolute;
     width: 400px;
-    height: 90%;
-    left: 900px;
-    top: 40px;
+
+    margin: 10px 60px;
     /* White */
     background: #FFFFFF;
     /* shadow */
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 32px;
     
+}
+
+.EncriptedContainer button{
+    box-sizing: border-box;
+
+    /* Auto layout */
+    padding: 24px;
+    gap: 8px;
+
+    
+    width: 336px;
+    height: 67px;
+    margin: 0 40px;
+    bottom: 30px;
+
+    /* Dark blue/dark-blue-300 */
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    /* Text Style*/
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 19px;
+    text-align: center;
+
+    /* Dark blue/dark-blue-300 */
+    color: #0A3871;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+    cursor: pointer;
+    transition: .6s ease;
+
+}
+.EncriptedContainer button:hover {
+    background: #c0d1e8;
+    transform: scale(1.05);
+}
+
+#encriptedText{
+    font-family: 'Inter';
+    font-style: normal;
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 150%;
+    /* or 36px */
+    /* Gray/gray-400 */
+    color: #495057;
+
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#divNotfound{
+    
+    /* width: 336px; */
+    /* height: 304px; */
+    margin: 100px 10px;
+
+}
+
+#divNotfound h1{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 120%;
+    /* or 29px */
+    text-align: center;
+
+    /* Gray/gray-500 */
+    color: #343A40;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+#divNotfound p{
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    /* or 24px */
+    text-align: center;
+    /* Gray/gray-400 */
+    color: #495057;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+/* APARTADO RESPONSIVE 
+    - Tablet 768 x 564
+    - Mobile 375 x 564
+*/
+
+@media screen and (max-width: 768px){
+    body{
+        width: auto;
+        height: auto;
+        margin: 10px 10px;
+    }
+    .MainContainer{
+        flex-direction: column;
+    }
+    .InputContainer textarea{
+        width: 600px;
+        height: 300px;
+        margin: 100px 70px;
+    }
+    .textButton{
+        margin-left: 20px
+    }
+    .Buttons{
+        margin-left: 10px;
+        justify-content: normal;
+    }
+    .Buttons button#encryp{
+        margin-right: 50px;
+    }
+    .EncriptedContainer{
+        width: 700px;
+        margin: 30px 20px;
+    }
+    .EncriptedContainer button{
+        margin: 0 182px;
+    }
+    #divNotfound{
+        margin: 20px 20px;
+    }
+    #divNotfound img{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 425px){
+    body{
+        width: auto;
+        height: auto;
+        margin: 10px 10px;
+    }
+    .MainContainer{
+        flex-direction: column;
+    }
+    .InputContainer textarea{
+        width: 100%;
+        height: 400px;
+        margin: 100px 5px;
+        padding: 0;
+    }
+    .textButton{
+        margin-left: 20px
+    }
+    .Buttons{
+        margin-left: 0px;
+        justify-content: normal;
+        display: flex;
+        flex-direction: column;
+    }
+    .Buttons button#encryp{
+        margin: 0px 5px;
+        width: 100%;
+    }
+    .Buttons button#deencryp{
+        margin: 0px 5px;
+        width: 100%;
+    }
+    .EncriptedContainer{
+        width: 100%;
+        margin: 30px 0px;
+    }
+    .EncriptedContainer button{
+        margin: 0 30px;
+        width: 80%;
+    }
+    #divNotfound{
+        margin: 20px 20px;
+    }
+    #divNotfound img{
+        display: none;
+    }
 }

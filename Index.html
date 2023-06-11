@@ -12,17 +12,30 @@
         <div class="MainContainer">
             <div class="InputContainer">
                 <img src="./src/A_Vector.png" id="logo" alt="Logo">
-                <input type="text" name="encrypter" id="encrypter" placeholder="Ingrese texto aqui">
-                <img src="./src/Exclamacion_Vector.png" alt="excl">
-                <p>Solo letras minusculas y sin acentos</p>
+                <textarea name="encrypter" id="encrypter" cols="30" rows="30"  placeholder="Ingrese texto aqui"></textarea>
+                
+                <div class="textButton">
+                    <img src="./src/Exclamacion_Vector.png" alt="excl">
+                    <p>Solo letras minusculas y sin acentos</p>
+                </div>
                 <div class="Buttons">
-                    <button id="encryp">Encriptar</button>
-                    <button id="deencryp">Desencriptar</button>
+                    <button id="encryp" onclick="DisplayBg()">Encriptar</button>
+                    <button id="deencryp" onclick="DisplayBg()">Desencriptar</button>
                 </div>
             </div>
             <div class="EncriptedContainer">
+                <div id="divEncripted" style="display: none;">
+                    <p id="encriptedText"></p>
+                    <button type="button" onclick="CopyText()"> Copiar </button>
+                </div>
+                <div id="divNotfound">
+                    <img src="./src/Muñeco.png" alt="munheco">
+                    <h1>Ningun Mensaje fue encontrado</h1>
+                    <p>Ingrese el texto que desee encriptar o desencriptar</p>
+                </div>
             </div>
         </div>
     </main>
 </body>
+<script src="./Script/Encrypter.js"></script>
 </html>
